@@ -4,12 +4,13 @@ A small node.js program that allows you to calculate and display the latency of 
 
 ## How to use
 
-1. Install `npm install`
+1. Run the following command to install the missing packages/modules :  `npm install`
 2. Run your GStreamer pipeline using the latency tracer and store the traces in a file like this:
 
         GST_DEBUG_COLOR_MODE=off GST_TRACERS="latency(flags=pipeline+element)" GST_DEBUG=GST_TRACER:7 GST_DEBUG_FILE=traces.log
 
 3. Run `node main.js traces.log` on that logfile. Check `-h` on more options.
+   - If the log file is elsewhere in the directory use the following : `node main.js -i <insert path to logfile here>/latencyData.log
 
 ## Examples
 
